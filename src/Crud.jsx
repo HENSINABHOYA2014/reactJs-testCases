@@ -97,6 +97,9 @@ const Crud = () => {
     return (
         <>
             <center>
+            <input type="text" placeholder="Enter text here" name="username" id="userId" value="Hensi"/>
+
+                <img title="AI generated image" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*c1VTPfj1eGMsC9ml3QOAlw.jpeg" alt="" />
                 <div className="modal-container">
                     <div className="modal" id="modal">
                         <div className="modal-content">
@@ -115,9 +118,9 @@ const Crud = () => {
 
                 <div className="container">
 
-                    <form className="form" id="form">
+                    {/* <form className="form" id="form">
                         <div className="form-control">
-                            <label for="email">Name</label>
+                            <label htmlFor="email">Name</label>
                             <input type="text" placeholder="Name" name="name" onChange={handleChange} value={input.name} />
                             <i className="fas fa-check-circle"></i>
                             <i className="fas fa-exclamation-circle"></i>
@@ -125,7 +128,7 @@ const Crud = () => {
                         </div>
 
                         <div className="form-control">
-                            <label for="email">Email</label>
+                            <label htmlFor="email">Email</label>
                             <input type="text" placeholder="email@email.com" name="email" onChange={handleChange} value={input.email} />
                             <i className="fas fa-check-circle"></i>
                             <i className="fas fa-exclamation-circle"></i>
@@ -133,7 +136,7 @@ const Crud = () => {
                         </div>
 
                         <div className="form-control">
-                            <label for="password">Password</label>
+                            <label htmlFor="password">Password</label>
                             <input type="password" placeholder="Password" name="password" onChange={handleChange} value={input.phone} />
                             <i className="fas fa-check-circle"></i>
                             <i className="fas fa-exclamation-circle"></i>
@@ -141,7 +144,7 @@ const Crud = () => {
                         </div>
 
                         <div className="form-control">
-                            <label for="email">City</label>
+                            <label htmlFor="email">City</label>
                             <input type="text" placeholder="City" name="city" onChange={handleChange} value={input.city} />
                             <i className="fas fa-check-circle"></i>
                             <i className="fas fa-exclamation-circle"></i>
@@ -149,7 +152,7 @@ const Crud = () => {
                         </div>
 
                         <div className="form-control">
-                            <label for="email">Salery</label>
+                            <label htmlFor="email">Salery</label>
                             <input type="text" placeholder="Salery" name="salery" onChange={handleChange} value={input.salery} />
                             <i className="fas fa-check-circle"></i>
                             <i className="fas fa-exclamation-circle"></i>
@@ -164,7 +167,7 @@ const Crud = () => {
                                 }
                             </td>
                         </tr>
-                    </form>
+                    </form> */}
                 </div>
                 {/* <table border={2} cellPadding={10}>
                     <tr>
