@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const Crud = () => {
-
+const[data,setData]=useState("");
     const [input, setInput] = useState({
         name: '',
         email: '',
@@ -97,7 +97,10 @@ const Crud = () => {
     return (
         <>
             <center>
-            <input type="text" placeholder="Enter text here" name="username" id="userId" value="Hensi"/>
+            <input type="text" placeholder="Enter text here" name="username" id="userId" value={data} onChange={(e)=>setData(e.target.value)}/>
+
+            <button onClick={()=>setData("updated data")}>Updated Data</button>
+            <h1>{data}</h1>
 
                 <img title="AI generated image" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*c1VTPfj1eGMsC9ml3QOAlw.jpeg" alt="" />
                 <div className="modal-container">
