@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot for Crud component 1`] = `
+<center>
+  <input
+    id="userId"
+    name="username"
+    onChange={[Function]}
+    placeholder="Enter text here"
+    type="text"
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Print
+  </button>
+  <br />
+  <button
+    data-testid="btn1"
+    onClick={[Function]}
+  >
+    Edit Function
+  </button>
+  <h1 />
+  <img
+    alt=""
+    src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*c1VTPfj1eGMsC9ml3QOAlw.jpeg"
+    title="AI generated image"
+  />
+  <div
+    className="modal-container"
+  >
+    <div
+      className="modal"
+      id="modal"
+    >
+      <div
+        className="modal-content"
+      >
+        <p>
+          Logged in as :
+        </p>
+        <p
+          className="logged-user"
+          id="logged-user"
+        >
+          example@gmail.com
+        </p>
+      </div>
+      <button
+        className="modal-close"
+        id="modal-close"
+        type="button"
+      >
+        OK
+      </button>
+    </div>
+  </div>
+  <div
+    className="toast"
+    id="toast"
+  >
+    <i
+      className="fas fa-exclamation-circle"
+    />
+    <p
+      className="toast-text"
+    >
+      Oops, Wrong email or password!
+    </p>
+    <i
+      className="fas fa-close"
+      id="close"
+    />
+  </div>
+  <div
+    className="container"
+  />
+  <br />
+  <br />
+  <table
+    border={1}
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="table-wrapper"
+      >
+        <div
+          className="table-title"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-sm-6"
+            >
+              <h2>
+                Manage 
+                <b>
+                  Employees
+                </b>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <table
+          className="table table-striped table-hover"
+        >
+          <thead>
+            <tr>
+              <th>
+                Id
+              </th>
+              <th>
+                Name
+              </th>
+              <th>
+                Email
+              </th>
+              <th>
+                Password
+              </th>
+              <th>
+                City
+              </th>
+              <th>
+                Salery
+              </th>
+              <th>
+                Action
+              </th>
+            </tr>
+          </thead>
+          <tbody />
+        </table>
+      </div>
+    </div>
+  </table>
+</center>
+`;
