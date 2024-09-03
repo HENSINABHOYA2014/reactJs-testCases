@@ -41,7 +41,7 @@ function Query() {
                 <br />
                 <br />
                 <h1>RTL Query : getPlaceholderText</h1>
-                <input type='text' placeholder='Enter Your Name'/>
+                <input type='text' placeholder='Enter Your Name' />
                 <br />
                 <br />
                 <br />
@@ -57,6 +57,40 @@ function Query() {
                 <div data-testid="div-test-id">Testing with test id</div>
                 <h2 data-testid="h2-test-id">h2 tag testing</h2>
                 <h2 data-testid="h2-test-id">Th2 tag testing</h2>
+                <br />
+                <br />
+                <br />
+                <h1>Overriding data-testid</h1>
+                <div id='test-element' data-testid="test-div">Hello World</div>
+                <br />
+                <br />
+                <br />
+                <h1>RTL Query :getByDisplayValue and getAllByDisplayValue</h1>
+                <textarea defaultValue={"My Mom is my life"} />
+                <div type="text" defaultValue="Henuuu">Hello World</div>
+                <br />
+                <input type='radio' defaultValue={"mail"} />
+                <br />
+                <br />
+                <br />
+                <h1>RTL Query :getByTitle and getAllByTitle</h1>
+                <button title='Click Please Me'>Click Please Me</button>
+                <button title='Click Please Me'>Click Please Me</button>
+                <button title='Click Please Me'>Click Please Me</button>
+                <button title='Click Please Me'>Click Please Me</button>
+                <button title='Click Please Me'>Click Please Me</button>
+                <br />
+                <br />
+                <br />
+                <h1>RTL Query :getByAltText and getAllByAltText</h1>
+                <img alt="flower image" src="https://images.unsplash.com/photo-1530092285049-1c42085fd395?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" width={"30%"} />
+                <img alt="flower image" src="https://images.unsplash.com/photo-1530092285049-1c42085fd395?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" width={"30%"} />
+                <img alt="flower image" src="https://images.unsplash.com/photo-1530092285049-1c42085fd395?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" width={"30%"} />
+                <h1>TextMatch with String and Regex</h1>
+                <div>Hellooooo World</div>
+                <h5>Har Har mahadev</h5>
+                <br />
+                
             </center>
         </>
     )

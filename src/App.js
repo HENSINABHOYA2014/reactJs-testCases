@@ -7,6 +7,7 @@ import { useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Users from './Users';
 import Query from './Query';
+import Method from './Method';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <div role='dummy'>dummy text</div>
         <br/>
         <Query/>
+        <Method/>
       </center>
     </>
   );

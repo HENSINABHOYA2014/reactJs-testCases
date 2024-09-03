@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { configure, render, screen } from '@testing-library/react';
 import Query from "./Query";
 import App from './App';
+configure({ testIdAttribute: 'data-testid' })
 
 
 test("Multiple elements and Custom Role & getbyrole query", () => {
@@ -102,6 +103,75 @@ test(" testing h2 with test id", () => {
     for (let i = 0; i < testid.length; i++) {
         expect(testid[0]).toBeInTheDocument();
     }
+})
+
+test("Overriding data-testid", () => {
+    render(<Query />)
+    const testidelement = screen.getAllByTestId("test-div");
+    for (let i = 0; i < testidelement.length; i++) {
+        expect(testidelement[0]).toBeInTheDocument();
+    }
+})
+
+test("getByDisplayValue and getAllByDisplayValue", () => {
+    render(<Query />)
+    const displayValue = screen.getByDisplayValue("Henuuu");
+    expect(displayValue).toBeInTheDocument();
+})
+
+test("textarea with getByDisplayValue and getAllByDisplayValue", () => {
+    render(<Query />)
+    const textarea = screen.getByDisplayValue("My Mom is my life");
+    expect(textarea).toBeInTheDocument();
+})
+
+test("radio with getByDisplayValue and getAllByDisplayValue", () => {
+    render(<Query />)
+    const radio = screen.getByDisplayValue("mail");
+    expect(radio).toBeInTheDocument();
+})
+
+test("title with getByTitle and getAllByTitle", () => {
+    render(<Query />)
+    const title = screen.getAllByText("Click Please Me");
+    for (let i = 0; i < title.length; i++) {
+        expect(title[i]).toBeInTheDocument();
+    }
+})
+
+
+// test("test image element with getByAltText and getAllByAltText", () => {
+//     render(<Query />)
+//     const alttext = screen.getByAltText("flower image");
+//     expect(alttext).toBeInTheDocument();
+// })
+
+test("test image element with getByAltText and getAllByAltText", () => {
+    render(<Query />)
+    const alttext = screen.getAllByAltText("flower image");
+    for (let i = 0; i < alttext.length; i++) {
+        expect(alttext[i]).toBeInTheDocument();
+    }
+})
+
+test("TextMatch with String", () => {
+    render(<Query />)
+    // const div = screen.getByText("Hellooooo",{exact:false});
+    // const div = screen.getByText("hellooooo World",{exact:false});
+    const div = screen.getByText("hellooooo world", { exact: false });
+    expect(div).toBeInTheDocument()
+})
+
+test("TextMatch with Regex", () => {
+    render(<Query />)
+    const div1 = screen.getByText(/har Mahadev/i);
+    expect(div1).toBeInTheDocument()
+})
+
+test("TextMatch with Function", () => {
+    render(<Query />)
+    const div1 = screen.getByText(/har Mahadev/i);
+    expect(div1).toBeInTheDocument()
 })
 
 
