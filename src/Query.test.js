@@ -1,6 +1,7 @@
 import { configure, render, screen } from '@testing-library/react';
 import Query from "./Query";
 import App from './App';
+import userEvent from '@testing-library/user-event';
 configure({ testIdAttribute: 'data-testid' })
 
 
@@ -168,11 +169,23 @@ test("TextMatch with Regex", () => {
     expect(div1).toBeInTheDocument()
 })
 
-test("TextMatch with Function", () => {
+test("QueryBy and QueryAllBy | Test hidden elements", () => {
     render(<Query />)
-    const div1 = screen.getByText(/har Mahadev/i);
-    expect(div1).toBeInTheDocument()
+    const loginbtbn = screen.queryByText("login");
+    expect(loginbtbn).not.toBeInTheDocument()
 })
+
+test("Test Elements with JavaScript Query | Custom Query", () => {
+    render(<Query />)
+    const querySelector = document.querySelector("#testing-id");
+    expect(querySelector).toBeInTheDocument()
+    expect(querySelector).toHaveTextContent("Test Elements with JavaScript Query | Custom Query")
+    expect(querySelector).toHaveAttribute("class")
+})
+
+
+
+
 
 
 

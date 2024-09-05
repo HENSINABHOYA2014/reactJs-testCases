@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Query() {
+    let login = true;
+   
+ 
     return (
         <>
             <center>
@@ -90,10 +93,17 @@ function Query() {
                 <div>Hellooooo World</div>
                 <h5>Har Har mahadev</h5>
                 <br />
-                
+                <h1>QueryBy and QueryAllBy | Test hidden elements</h1>
+                {
+                    login ? <button>Logout</button> : <button>Login</button>
+                }
+                <br />
+                <br />
+               <h1 id='testing-id' className='test-class'>Test Elements with JavaScript Query | Custom Query</h1>
+               
             </center>
         </>
     )
-}
+} 
 
 export default Query
