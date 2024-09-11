@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 function Query() {
     let login = true;
-   
- 
+
+
     return (
         <>
             <center>
@@ -70,7 +70,9 @@ function Query() {
                 <br />
                 <h1>RTL Query :getByDisplayValue and getAllByDisplayValue</h1>
                 <textarea defaultValue={"My Mom is my life"} />
-                <div type="text" defaultValue="Henuuu">Hello World</div>
+                 <div>
+                <input type="text" defaultValue="Henuuu" />
+            </div>
                 <br />
                 <input type='radio' defaultValue={"mail"} />
                 <br />
@@ -99,11 +101,13 @@ function Query() {
                 }
                 <br />
                 <br />
-               <h1 id='testing-id' className='test-class'>Test Elements with JavaScript Query | Custom Query</h1>
-               
+                <h1 id='testing-id' className='test-class'>Test Elements with JavaScript Query | Custom Query</h1>
+                <br />
+                <h2>Ganpati Bappa Moriya!</h2>
+                <input/>
             </center>
         </>
     )
-} 
+}
 
 export default Query

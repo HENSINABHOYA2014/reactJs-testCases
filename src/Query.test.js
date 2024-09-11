@@ -1,7 +1,8 @@
-import { configure, render, screen } from '@testing-library/react';
+import { configure, logRoles, render, screen } from '@testing-library/react';
 import Query from "./Query";
 import App from './App';
 import userEvent from '@testing-library/user-event';
+import User from './User';
 configure({ testIdAttribute: 'data-testid' })
 
 
@@ -115,10 +116,11 @@ test("Overriding data-testid", () => {
 })
 
 test("getByDisplayValue and getAllByDisplayValue", () => {
-    render(<Query />)
-    const displayValue = screen.getByDisplayValue("Henuuu");
-    expect(displayValue).toBeInTheDocument();
-})
+        render(<Query />)
+        const displayValue = screen.getByDisplayValue("Henuuu");
+        expect(displayValue).toBeInTheDocument();
+    })
+    
 
 test("textarea with getByDisplayValue and getAllByDisplayValue", () => {
     render(<Query />)
@@ -183,7 +185,25 @@ test("Test Elements with JavaScript Query | Custom Query", () => {
     expect(querySelector).toHaveAttribute("class")
 })
 
+test("Test Elements with JavaScript Query | Custom Query", () => {
+    const name = "Hensi"
+    render(<User name="Hensi" />)
+    const user = screen.getByText("Hensi");
+    expect(user).toBeInTheDocument()
+})
 
+test("Debugging in React testing library", () => {
+    const { container, debug } = render(<Query />)
+    // const element=screen.getByText("Ganpati Bappa Moriyaaaa!");
+    // expect(element).toBeInTheDocument();
+    logRoles(container)
+})
+
+test("API test with MSW", async () => {
+    render(<Query />)
+    const el = await screen.findAllByRole("listitem");
+    expect(el).toHaveLength(5);
+});
 
 
 
